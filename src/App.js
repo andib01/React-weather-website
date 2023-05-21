@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div className="app">
-      <div className="weather-app-title">Weather App created by:</div>
+      <div className="weather-app-title">Weather App created by Andrija:</div>
       <div className="search">
         <input
           value={location}
