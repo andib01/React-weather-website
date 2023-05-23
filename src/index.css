@@ -29,6 +29,7 @@ h1 {
   background-color: rgba(0,0,0,0.4);
   color: #fff;
 }
+
 .weather-app-title {
   position: absolute;
   top: 1rem;
@@ -37,6 +38,7 @@ h1 {
   font-weight: 300;
   color: #fff;
 }
+
 .app:before {
   content: '';
   background: url('./assets/weather.jpg') no-repeat center center/cover;
@@ -87,7 +89,6 @@ h1 {
   position: relative;
   right: -90%;
   transform-origin: 0 0;
-  
 }
 
 .app .bottom {
@@ -103,4 +104,30 @@ h1 {
 
 .bold {
   font-weight: 700;
+}
+
+/* Media queries for responsive layout */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .app .description {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
