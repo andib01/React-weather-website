@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './App.css';
+import './index.css';
 
 function App() {
   const [data, setData] = useState({});
   const [location, setLocation] = useState('');
   const temperatureCelsius = (data?.main?.temp - 32) * 5 / 9;
   const feelsLikeCelsius = (data?.main?.feels_like - 32) * 5 / 9;
-  const windSpeedKph = (data?.wind?.speed * 1.609344).toFixed(2);
+  const windSpeedKph = (data?.wind?.speed * 1.609344).toFixed(2); // Convert wind speed to km/h and round to 2 decimal places
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=895284fb2d2c50a520ea537456963d9c`;
 
